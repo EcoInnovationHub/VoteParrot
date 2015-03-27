@@ -1,0 +1,29 @@
+{
+  "name": "voteParrot_website",
+  "version": "1.0.0",
+  "description": "site for the VoteParrot app developed by EcoInnovation Hub",
+  "keywords": [
+    "election",
+    "sr",
+    "first-try"
+  ],
+  "authors": [
+    "Eyo O. E. <maziey93@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "http://ecoinnovationhub.github.io/voteparrot",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "iphone-5c": "*",
+    "bootstrap": "~3.3.4",
+    "bootstrap-material-design": "~0.3.0",
+    "fontawesome": "~4.3.0"
+  }
+}

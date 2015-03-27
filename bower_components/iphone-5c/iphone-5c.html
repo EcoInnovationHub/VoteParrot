@@ -1,0 +1,58 @@
+<link rel="import" href="components/polymer/polymer.html">
+<polymer-element name="iphone-5c" attributes="color size src">
+  <template>
+  	<style>
+      :host {
+        display:block;
+      }
+      #container {
+        position: relative;
+        width:400px;
+        height: 582.3px;
+      }
+      #iphone5c {
+        position: absolute;
+        width:100%;
+        height: 100%;
+      }
+      #display {
+        background:white;
+        width:60%;
+        height:70%;
+        position: absolute;
+        top:13%;
+        left:20%;
+      }
+      #inner {
+        position:absolute;
+        width:100%;
+        height:100%;
+      }
+
+  	</style>
+    <div id="container" data-size="{{size}}">
+      <img id="iphone5c" alt="{{color}}" src="https://dlebm0f040apo.cloudfront.net/public/142a59/images/iphone-5c-{{color}}.png" />
+      <div id="display">
+        <img id="inner" alt="iphone-5c display" src="{{src}}"/> 
+      </div>
+    </div>
+  </template>
+  <script>
+    Polymer("iphone-5c",{
+      color:"blue",
+      publish: function(){
+        size:1
+      },
+      ready: function(){
+        var new_width = this.$.container.offsetWidth * this.$.container.getAttribute('data-size');
+        var new_height = this.$.container.offsetHeight * this.$.container.getAttribute('data-size');
+        if (new_width == 0){
+          new_width = this.$.container.offsetWidth;
+          new_height = this.$.container.offsetHeight;
+        }
+        this.$.container.style.width = new_width+"px";
+        this.$.container.style.height = new_height+"px";
+      }
+    }); 
+  </script>
+</polymer-element>

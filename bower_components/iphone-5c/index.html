@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Iphone-5c template demo</title>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <script src="components/platform/platform.js"></script>
+  <link rel="import" href="iphone-5c.html">
+  <style>
+
+  html,body {
+    height: 100%;
+    margin: 0;
+  }
+  main {
+    position: fixed;
+    width: 100%;
+    height: 88%;
+    background: #FF6600;
+    overflow:hidden;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    text-align: center;
+    color: white;
+  }
+  #container {
+    position: absolute;
+    background: white;
+    width: 100%;
+    min-height: 12%;
+    z-index: 2;
+    top: 87%;
+  }
+  #title {
+    font-weight: 900;
+    font-size: 5rem;
+    top: 20%;
+    transform: translateY(-50%);
+    position: relative;
+    margin-bottom: 0px;
+  }
+  #description {
+    font-size: 20px;
+    font-weight: 900;
+    top: 20%;
+    transform: translateY(-50%);
+    position: relative;
+    margin-bottom: 30px;
+  }
+  #button {
+    background: #1f8dd6;
+    width: 250px;
+    height: 50px;
+    position: relative;
+    top: 20%;
+    transform: translateY(-50%);
+    padding: 0.7rem 2rem;
+    border-radius: 6px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #button_inner {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    top: 40%;
+    transform: translateY(-50%);
+    position: relative;
+  }
+  #demo {
+    margin-right: auto;
+    margin-left: auto;
+    width:100px;
+    margin-top: 4%;
+  }
+  button {
+    background-color: #008cba;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 20px;
+    border:none;
+    width:90px;
+    height:50px;
+  }
+  #button_container {
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+  }
+  #source {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+  }
+  #color {
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+  }
+  #iphone {
+    height:600px;
+    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+  }
+  #inner2 {
+
+  }
+  </style>
+</head>
+
+<body unresolved touch-action="auto">
+
+  <main>
+    <h1 id="title">&lt; iPhone 5c &gt;</h1>
+    <h1 id="description">A web component for adding an iPhone image to your site with the picture display of your choice.</h1>
+    <div id="button"><a href="https://github.com/yujyet/iphone-5c" id="button_inner">View on Github</a></div>
+  </main>
+  <div id="container">
+    <h1 id="demo">Demo</h1>
+    <div id="button_container">
+      <button class="src first" value="Example 1">Example 1</button>
+      <button class="src" value="Example 2">Example 2</button>
+      <button class="src" value="Example 3">Example 3</button>
+    </div>
+    <div id="source">
+      <textarea class="src" rows="2" cols="50" style="resize:none" disabled></textarea>
+    </div>
+    <div id="color">
+      <button class="color first" value="blue">Blue</button>
+      <button class="color" value="green">Green</button>
+      <button class="color" value="#EA3556">Red</button>
+    </div>
+    <div id="iphone"><iphone-5c color="blue" src="iphone-lockscreen.jpg" size="1"></iphone-5c></div>
+    <div id="inner2"></div>
+  </div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script>
+    //codes for examples buttons and source textarea
+    $(".first").css("background-color",'#EA3556');
+    $("textarea.src").html("http://i62.tinypic.com/2i2alxf.jpg");
+    $("iphone-5c").attr("src","http://i62.tinypic.com/2i2alxf.jpg");
+    $("button.src").click(function(){
+      var text = $(this).attr("value");
+      if (text == "Example 1")
+      {
+        $("iphone-5c").attr("src","http://i62.tinypic.com/2i2alxf.jpg");
+        $("textarea.src").html("http://i62.tinypic.com/2i2alxf.jpg");
+        $("button.src").css("background-color",'#008cba');
+        $(this).css("background-color",'#EA3556');
+      } else if (text == "Example 2") {
+        $("iphone-5c").attr("src","http://i.imgur.com/rwKX7uC.jpg");
+        $("textarea.src").html("http://i.imgur.com/rwKX7uC.jpg");
+        $("button.src").css("background-color",'#008cba');
+        $(this).css("background-color",'#EA3556');
+      } else if (text == "Example 3"){
+        $("iphone-5c").attr("src","https://dlebm0f040apo.cloudfront.net/public/4e20b5/images/match-03@2x-en_US.jpg");
+        $("textarea.src").html("https://dlebm0f040apo.cloudfront.net/public/4e20b5/images/match-03@2x-en_US.jpg");
+        $("button.src").css("background-color",'#008cba');
+        $(this).css("background-color",'#EA3556');
+      }
+    });
+    //codes for changing the color of iPhone 5c
+    $("button.color").click(function(){
+      var text = $(this).attr("value");
+      if (text == "blue"){
+        $("iphone-5c").attr("color","blue");
+        $("button.color").css("background-color",'#008cba');
+        $(this).css("background-color",'#EA3556');
+      } else if (text == "green") {
+        $("iphone-5c").attr("color","green");
+        $("button.color").css("background-color",'#008cba');
+        $(this).css("background-color",'#EA3556');
+      } else if (text == "#EA3556") {
+        $("iphone-5c").attr("color","red");
+        $("button.color").css("background-color",'#008cba');
+        $(this).css("background-color",'#EA3556');
+      }
+    });
+  </script>
+</body>
+
+</html>

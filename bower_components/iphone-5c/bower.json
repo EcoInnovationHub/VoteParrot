@@ -1,0 +1,27 @@
+{
+  "name": "iphone-5c",
+  "version": "0.0.1",
+  "homepage": "https://github.com/yujyet/iphone-5c",
+  "authors": [
+    "Yu-Jye Tung"
+  ],
+  "description": "A web component that displays an Iphone (can choose between 3 colors) with the user's choice of image as the Iphone's display.",
+  "keywords": [
+    "Polymer",
+    "web-components",
+    "iphone",
+    "Iphone",
+    "images"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "~0.3.3"
+  }
+}

@@ -1,0 +1,41 @@
+.navbar {
+  min-height: 70px;
+}
+
+.jumbotron {
+	background-image: url("../img/voteparrot_bg.jpg");
+	background-size: cover;
+	height: 450px;
+	position: relative;
+	top: -20px;
+}
+
+.voteparrot_cta {
+	padding-top: 120px;
+	padding-left: 50px;
+}
+
+.content {
+	padding-bottom: 30px;
+}
+
+footer {
+	background-color: #333;
+	padding-top: 30px;
+}
+
+.brand_logo {
+	padding-top: 5px;
+}
+
+.col-md-3 h5{
+	color: #f7f7f7;
+}
+
+.social {
+	padding-left: 7px;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+  background-color: transparent;
+}
